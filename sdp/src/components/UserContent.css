@@ -1,0 +1,242 @@
+/* App.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Logo styles */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  padding-left: 85px;
+}
+
+.logo-img {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px; /* Add some margin for spacing */
+}
+
+/* Align title next to logo */
+.logo-title {
+  margin: 0;
+  font-size: 44px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.app-container {
+  position: relative;
+  padding: 100px;
+  padding-top: 100px; /* Adjusted the top padding */
+  background-color: #a0c8f0;
+}
+
+.settings {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #0f93ec;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.settings.open {
+  background-color: #156ca0;
+}
+
+.settings.open .icon {
+  transform: rotate(45deg);
+}
+
+.dropdown {
+  position: absolute;
+  top: 60px;
+  right: 60%;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.settings.open .dropdown {
+  display: inline-block;
+}
+
+.dropdown button {
+  background-color: #0c98f6;
+  color: #fff;
+  border: none;
+  padding: 5px 20px;
+  margin-bottom: 15px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.settings .icon {
+  font-size: 20px;
+  color: #fff;
+}
+
+.dropdown button:hover {
+  background-color: #2980b9;
+}
+
+.logout-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.scrollable-container {
+  overflow-y: auto;
+  height: 90vh; /* Change this line */
+  width: 180vh;
+  padding-left: 290px;
+}
+/* UserContent.css */
+
+.app-container.settings-open .dropdown {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background-color: #79c7f1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.app-container.settings-open .dropdown button {
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  text-align: left;
+}
+
+.app-container.settings-open .dropdown button:hover {
+  background-color: #55b5f1;
+}
+
+/* Add the following styles for the masonry layout */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+@media (max-width: 767px) {
+  .cards-container {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  }
+}
+.card {
+  margin: 10px; /* Adjust the margin to control the gap between cards */
+
+ 
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card h2 {
+  margin-bottom: 5px;
+}
+
+.card p {
+  margin: 1px;
+}
+
+
+.filter-container {
+  position: fixed;
+  top: 100px; /* Adjusted the top position */
+  left: -20px; /* Moved it to the left */
+  padding: 20px;
+ 
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.small-card {
+  max-width: 200px; /* Set the maximum width for the small card */
+  height: 150px; /* Set the fixed height for the small card */
+  /* Add any other styles you want for small cards */
+}
+
+/* Add this CSS to your existing stylesheet or create a new one */
+.filter-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.filter-label input {
+  margin-right: -15px; /* Adjust the margin as needed */
+}
+.popup-content {
+  overflow-y: auto;  /* Add this line */
+  max-height: 80vh;  /* You can adjust the max-height as needed */
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.popup-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
+  backdrop-filter: blur(10px); /* Adjust the blur effect as needed */
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1001;
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+.close-btn {
+  position: absolute;
+  font-size: 20px;
+  cursor: pointer;
+  left: 10px;
+  top: 13px;
+  color: rgb(0, 0, 0); /* Set the color to match the overlay */
+}
+

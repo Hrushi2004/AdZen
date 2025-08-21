@@ -1,0 +1,235 @@
+/* App.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  position: relative; /* Make the body a positioning context for pseudo-element */
+  overflow: hidden; /* Hide overflowing semi-circle */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Ensure full viewport height */
+}
+
+/* Add a pale blue semi-circle */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  right: 3%;
+  width: 200%;
+  bottom: 100%;
+  padding-bottom: 100%;
+  background-color: #a0c8f0;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+/* Adjust the size of the image */
+.right-image {
+  position: absolute;
+  right: -5%;
+  width: 600px;
+  height: auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Style the content */
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* Style the text */
+.text {
+  flex: 1;
+  max-width: calc(61.8% - 20px); /* Golden ratio value minus padding */
+  padding: 20px;
+  text-align: left;
+}
+
+.text h1 {
+  font-size: 2.618rem; /* Golden ratio value */
+  margin-bottom: 20px;
+}
+
+.text p {
+  font-size: 1.618rem; /* Golden ratio value */
+  line-height: 1.5;
+}
+
+/* Style the button */
+button {
+  background-color: #156ca0;
+  color: rgb(243, 233, 233);
+  font-size: 1.618rem; /* Golden ratio value */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #185d92;
+}
+
+/* App.css */
+
+/* App.css */
+
+/* Apply smooth scrolling behavior to the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Center the content on the Learnmore page */
+.learn-more-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Style the Learnmore content */
+.learn-more-content {
+  text-align: center;
+  max-width: 800px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.learn-more-content h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+.learn-more-content p {
+  font-size: 16px;
+  color: #666;
+}
+
+
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8); /* Light background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Ensure the pop-up appears above other content */
+}
+
+.popup-content {
+  position: relative;
+  background: #a0c8f0; /* Bright yellow background */
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  max-width: 80%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* Slight drop shadow */
+  font-family: 'Comic Sans MS', cursive; /* Playful font */
+}
+
+.popup-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  color: red; /* Red color for the X mark */
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.popup-close:hover {
+  color: darkred; /* Change X mark color on hover */
+}
+
+.popup-button {
+  background: #ff6666; /* Light red background */
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.popup-button:hover {
+  background: #ff3333; /* Darker red on hover */
+}
+
+
+.popup-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -25px; /* Adjust this value for the position of the semi-circle */
+  width: 50px; /* Adjust this value for the size of the semi-circle */
+  height: 50px; /* Adjust this value for the size of the semi-circle */
+  background: #7ca6d8;
+  border-radius: 50%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-50%); /* Center vertically */
+}
+
+
+
+/* App.css */
+/* Updated CSS for a centered X mark within the left-aligned circle */
+
+.popup-close {
+  position: absolute;
+  top: -15px; /* Adjust the top position as needed */
+  left: -15px; /* Adjust the left position as needed */
+  width: 30px;
+  height: 30px;
+  background-color: #7ca6d8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.popup-close:hover {
+  background-color: #7ca6d8; /* Change background color on hover */
+}
+
+.popup-close span {
+  font-size: 20px;
+  line-height: 1;
+  font-weight: bold;
+  color: #333;
+  position: relative;
+  left: 1px; /* Adjust the left position to center the X */
+}
+
+/* App.css */
+/* Styling for the "Sign In" button in the pop-up */
+.signup-button {
+  background-color: #5993c0; /* Blue background color */
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.signup-button:hover {
+  background-color: #156ca0; /* Darker blue on hover */
+}

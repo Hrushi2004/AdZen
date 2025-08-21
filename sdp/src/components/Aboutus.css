@@ -1,0 +1,54 @@
+/* AboutUs.css */
+.about-us-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative; /* Make the container a positioning context */
+    overflow: hidden; /* Hide overflowing semi-circle */
+  }
+  
+  
+  
+  /* Style the About Us content */
+  .about-us-content {
+    background-color: #ffffff; /* Content background color */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Box shadow for a card-like effect */
+    padding: 20px;
+    text-align: center;
+    width: 80%; /* Adjust the width as needed */
+    max-width: 800px; /* Limit the maximum width */
+  }
+  
+  /* Style the text within the About Us content */
+  .about-us-content h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .about-us-content p {
+    font-size: 16px;
+    color: #666;
+  }
+  /* Style the "Back to Home" link */
+.back-link {
+  text-decoration: none; /* Remove underlines from the link */
+  background-color:  #7ca6d8; /* Orange background color */
+  color: #fff; /* White text color */
+  padding: 10px 20px; /* Padding around the link text */
+  border-radius: 5px; /* Rounded corners */
+  font-weight: bold; /* Make the text bold */
+  transition: background-color 0.3s ease; /* Smooth color transition on hover */
+
+  /* Center the link horizontally and vertically */
+  display: inline-block;
+  text-align: center;
+  line-height: 1;
+}
+
+/* Hover effect: Darken the background color on hover */
+.back-link:hover {
+  background-color: #156ca0; /* Slightly darker orange */
+}

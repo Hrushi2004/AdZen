@@ -1,0 +1,103 @@
+/* Sign-in form container */
+.class {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo container */
+.signin {
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Inputs */
+.signin input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+/* Sign-in button */
+.register-button {
+  background-color: #0088cc;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Sign-in button hover state */
+.register-button:hover {
+  background-color: #006699;
+}
+
+/* Error message */
+.error-message {
+  color: #e74c3c;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.password-input-container {
+  position: relative;
+}
+
+.password-toggle-icon {
+  position: absolute;
+  top: 35%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #666;
+  font-size: 18px; /* Adjust the font size as needed for clarity */
+}
+
+/* Add this to center the icon horizontally */
+.password-toggle-icon::before {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.logo-img {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  right: 100px;
+}
+.rg{
+  position: absolute;
+  top: 650px ;
+  left: 680px;
+}
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.logo-container img {
+  max-width: 50%;
+  max-height: 100%;
+}

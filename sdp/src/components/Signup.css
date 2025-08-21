@@ -1,0 +1,90 @@
+/* RegistrationPage.css */
+
+/* Container for the entire registration page */
+.registration-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f6f9;
+}
+
+/* Form section */
+.registration-form {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 350px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #333333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d1d1d1;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #555555;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.register-button {
+  background-color: #2980b9;
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.register-button:hover {
+  background-color: #1c6fa6;
+}
+
+/* Image section */
+.image-container {
+  width: 40%;
+  padding: 20px;
+  text-align: center;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+/* Add these styles for the back button */
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: transparent;
+  border: none;
+  font-size: 28px; /* Increase the button size */
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.back-button:hover {
+  background-color: blue;
+}
+
